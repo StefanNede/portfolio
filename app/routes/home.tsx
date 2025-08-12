@@ -1,5 +1,5 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import { useState } from "react";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -9,5 +9,11 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  return <Welcome />;
+  const [count, setCount] = useState(0);
+  return (
+    <>
+      <h1>Hello World</h1>
+      <button onClick={() => setCount(count+1)}>{count}</button>
+  </>
+  );
 }
