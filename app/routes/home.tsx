@@ -1,5 +1,6 @@
 import type { Route } from "./+types/home";
 import { useState } from "react";
+import { Link } from "react-router";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -13,6 +14,11 @@ export default function Home() {
   return (
     <>
       <h1>Hello World</h1>
+      <Link to="/about">
+        <button>
+          About
+        </button>
+      </Link>
       <button onClick={() => setCount(count+1)}>{count}</button>
   </>
   );
