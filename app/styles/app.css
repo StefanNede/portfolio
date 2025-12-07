@@ -7,16 +7,12 @@
 
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
-
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  }
+  background-color: #303030;
+  color: lightgrey;
 }
 
 button {
   width: 10vw;
   height: 10vh;
-  background-color: white;
-  color: black;
+  color: white;
 }
