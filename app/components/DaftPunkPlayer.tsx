@@ -37,7 +37,7 @@ const DaftPunkPlayer = () => {
 
     return (
         <button className={recordClassName} onClick={() => setPlayMusic(!playMusic)}>
-          <img src="app/lib/vinyl-record.png" alt="daft punk"/>
+          <img src="./app/lib/vinyl-record.png" alt="daft punk"/>
         </button>
     )
 }
