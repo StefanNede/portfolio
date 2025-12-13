@@ -1,3 +1,4 @@
+"use client"
 import { Link } from "react-router";
 import "../styles/navbar.css";
 

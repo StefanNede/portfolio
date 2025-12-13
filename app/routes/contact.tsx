@@ -1,3 +1,4 @@
+"use client"
 import type { Route } from "./+types/home";
 import { Link } from "react-router";
 import Navbar from "~/components/Navbar";

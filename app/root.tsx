@@ -7,7 +7,9 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
+import {useState, useEffect, useRef} from "react"
 
+import DaftPunkPlayer from "~/components/DaftPunkPlayer";
 import type { Route } from "./+types/root";
 import "./styles/app.css";
 
@@ -25,6 +27,7 @@ export const links: Route.LinksFunction = () => [
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
+
   return (
     <html lang="en">
       <head>
@@ -37,6 +40,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         {children}
         <ScrollRestoration />
         <Scripts />
+        <DaftPunkPlayer/>
       </body>
     </html>
   );
