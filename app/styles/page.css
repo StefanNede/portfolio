@@ -4,5 +4,29 @@
 
 .mainpage {
     width: 100%;
-    padding: 1rem;
+    background-color: rgb(23 23 23); /* this is bg-neutral-900 in tailwind */
+}
+
+.cd {
+    position: absolute;
+    z-index: 10; /* to be in front of shooting stars background */
+    height:8vh;
+    width: 8vh;
+    bottom: 5vh;
+    right: 5vw;
+}
+
+/* spinning animation for record */
+.disc {
+    -webkit-animation: turn-data-v-700684d3 8s linear infinite;
+    animation: turn-data-v-700684d3 8s linear infinite;
+}
+
+@keyframes turn-data-v-700684d3 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
 }
