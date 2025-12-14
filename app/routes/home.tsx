@@ -24,7 +24,7 @@ export default function Home() {
             <span>Stefan Nedelcu</span>
           </h2>
           <p className="z-10 text-md md:text-lg m-2">
-            <a href="https://www.ox.ac.uk/" target="_blank">oxford</a> computer science
+            <a href="https://www.ox.ac.uk/" target="_blank">[oxford]</a> computer science
           </p>
           {/* <span className="text-sm">
             computational medicine | quantum information

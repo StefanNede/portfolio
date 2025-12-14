@@ -29,6 +29,7 @@ export default function Education() {
       <Navbar currentPage="education"/>
 
       <div className="mainpage edupage p-8 md:p-16 relative">
+
         <StarsBackground />
         <ShootingStars/>
         <h2 className="text-4xl font-bold mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">
@@ -83,6 +84,11 @@ export default function Education() {
             />
           )}
         </AnimatePresence>
+
+        {/* footnote */}
+        <div className="z-10 relative mt-10 text-md">
+          <p>* These are <a href="https://www.ox.ac.uk/admissions/graduate/courses/msc-advanced-computer-science" target="_blank">[master's]</a> level courses that I have taken during my undergrad.</p>
+        </div>
 
       </div>
     </div>
