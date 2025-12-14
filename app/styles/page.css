@@ -3,12 +3,18 @@
 }
 
 .mainpage {
+    margin-left: 10vw; /* for the navbar */
+    height:100vh;
     width: 100%;
     background-color: rgb(23 23 23); /* this is bg-neutral-900 in tailwind */
 }
 
+.mainpage.edupage{
+    height: 100%;
+}
+
 .cd {
-    position: absolute;
+    position: fixed;
     z-index: 10; /* to be in front of shooting stars background */
     height:8vh;
     width: 8vh;

@@ -7,12 +7,7 @@
 
 html,
 body {
-  background-color: #1e1e1e;
+  background-color: rgb(23 23 23); /* this is bg-neutral-900 in tailwind */
   color: lightgrey;
 }
 
-button {
-  width: 10vw;
-  height: 10vh;
-  color: white;
-}
