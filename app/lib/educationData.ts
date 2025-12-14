@@ -3,92 +3,100 @@ export const educationData = [
     id: "university",
     level: "University of Oxford",
     subtitle: "MCompSci Computer Science (2024 - 2028)",
-    // The "Stars" in the constellation
-    modules: [
-      {
-        id: "dm",
-        title: "Discrete Maths",
-        description: "An in-depth exploration of the functional paradigm using Haskell. Covered immutability, recursion schemes, and monads.",
-        topics: ["Haskell", "Lambda Calculus", "Monads", "Type Systems"],
-        link: "https://www.cs.ox.ac.uk/teaching/courses/2020-2021/fp/",
-      },{
-        id: "cm",
-        title: "Continuous Maths",
-        description: "An in-depth exploration of the functional paradigm using Haskell. Covered immutability, recursion schemes, and monads.",
-        topics: ["Haskell", "Lambda Calculus", "Monads", "Type Systems"],
-        link: "https://www.cs.ox.ac.uk/teaching/courses/2020-2021/fp/",
-      },{
-        id: "la",
-        title: "Linear Algebra",
-        description: "An in-depth exploration of the functional paradigm using Haskell. Covered immutability, recursion schemes, and monads.",
-        topics: ["Haskell", "Lambda Calculus", "Monads", "Type Systems"],
-        link: "https://www.cs.ox.ac.uk/teaching/courses/2020-2021/fp/",
-      },{
-        id: "prob",
-        title: "Probability",
-        description: "An in-depth exploration of the functional paradigm using Haskell. Covered immutability, recursion schemes, and monads.",
-        topics: ["Haskell", "Lambda Calculus", "Monads", "Type Systems"],
-        link: "https://www.cs.ox.ac.uk/teaching/courses/2020-2021/fp/",
-      },
-      {
-        id: "ds",
-        title: "Digital Systems",
-        description: "Analysis of algorithmic complexity, sorting, searching, and graph algorithms.",
-        topics: ["Big O Notation", "Graph Theory", "Dynamic Programming", "Trees"],
-        link: "#",
-      },
-      {
-        id: "daa",
-        title: "Design & Analysis of Algorithms",
-        description: "Analysis of algorithmic complexity, sorting, searching, and graph algorithms.",
-        topics: ["Big O Notation", "Graph Theory", "Dynamic Programming", "Trees"],
-        link: "#",
-      },
-{
-        id: "fp",
-        title: "Functional Programming",
-        description: "Analysis of algorithmic complexity, sorting, searching, and graph algorithms.",
-        topics: ["Big O Notation", "Graph Theory", "Dynamic Programming", "Trees"],
-        link: "#",
-      },
-      {
-        id: "ip",
-        title: "Imperative Programming",
-        description: "Analysis of algorithmic complexity, sorting, searching, and graph algorithms.",
-        topics: ["Big O Notation", "Graph Theory", "Dynamic Programming", "Trees"],
-        link: "#",
-      },{
-        id: "ips",
-        title: "Introduction to Proof Systems",
-        description: "Analysis of algorithmic complexity, sorting, searching, and graph algorithms.",
-        topics: ["Big O Notation", "Graph Theory", "Dynamic Programming", "Trees"],
-        link: "#",
-      },{
-        id: "moc",
-        title: "Models of Computation",
-        description: "Analysis of algorithmic complexity, sorting, searching, and graph algorithms.",
-        topics: ["Big O Notation", "Graph Theory", "Dynamic Programming", "Trees"],
-        link: "#",
-      },{
-        id: "cp",
-        title: "Concurrent Programming",
-        description: "Analysis of algorithmic complexity, sorting, searching, and graph algorithms.",
-        topics: ["Big O Notation", "Graph Theory", "Dynamic Programming", "Trees"],
-        link: "#",
-      },{
-        id: "ml",
-        title: "Machine Learning",
-        description: "Analysis of algorithmic complexity, sorting, searching, and graph algorithms.",
-        topics: ["Big O Notation", "Graph Theory", "Dynamic Programming", "Trees"],
-        link: "#",
-      },{
-        id: "qi",
-        title: "Quantum Information",
-        description: "Analysis of algorithmic complexity, sorting, searching, and graph algorithms.",
-        topics: ["Big O Notation", "Graph Theory", "Dynamic Programming", "Trees"],
-        link: "#",
-      },
-    ],
+    // groups used to distinguish between years of uni
+    groups: [
+        {
+            year: "Year 1",
+            // The "Stars" in the constellation
+            modules: [
+                {
+                    id: "dm",
+                    title: "Discrete Maths",
+                    description: "An in-depth exploration of the functional paradigm using Haskell. Covered immutability, recursion schemes, and monads.",
+                    topics: ["Haskell", "Lambda Calculus", "Monads", "Type Systems"],
+                    link: "https://www.cs.ox.ac.uk/teaching/courses/2020-2021/fp/",
+                },{
+                    id: "cm",
+                    title: "Continuous Maths",
+                    description: "An in-depth exploration of the functional paradigm using Haskell. Covered immutability, recursion schemes, and monads.",
+                    topics: ["Haskell", "Lambda Calculus", "Monads", "Type Systems"],
+                    link: "https://www.cs.ox.ac.uk/teaching/courses/2020-2021/fp/",
+                },{
+                    id: "la",
+                    title: "Linear Algebra",
+                    description: "An in-depth exploration of the functional paradigm using Haskell. Covered immutability, recursion schemes, and monads.",
+                    topics: ["Haskell", "Lambda Calculus", "Monads", "Type Systems"],
+                    link: "https://www.cs.ox.ac.uk/teaching/courses/2020-2021/fp/",
+                },{
+                    id: "prob",
+                    title: "Probability",
+                    description: "An in-depth exploration of the functional paradigm using Haskell. Covered immutability, recursion schemes, and monads.",
+                    topics: ["Haskell", "Lambda Calculus", "Monads", "Type Systems"],
+                    link: "https://www.cs.ox.ac.uk/teaching/courses/2020-2021/fp/",
+                },{
+                    id: "ds",
+                    title: "Digital Systems",
+                    description: "Analysis of algorithmic complexity, sorting, searching, and graph algorithms.",
+                    topics: ["Big O Notation", "Graph Theory", "Dynamic Programming", "Trees"],
+                    link: "#",
+                },{
+                    id: "daa",
+                    title: "Design & Analysis of Algorithms",
+                    description: "Analysis of algorithmic complexity, sorting, searching, and graph algorithms.",
+                    topics: ["Big O Notation", "Graph Theory", "Dynamic Programming", "Trees"],
+                    link: "#",
+                },{
+                    id: "fp",
+                    title: "Functional Programming",
+                    description: "Analysis of algorithmic complexity, sorting, searching, and graph algorithms.",
+                    topics: ["Big O Notation", "Graph Theory", "Dynamic Programming", "Trees"],
+                    link: "#",
+                },{
+                    id: "ip",
+                    title: "Imperative Programming",
+                    description: "Analysis of algorithmic complexity, sorting, searching, and graph algorithms.",
+                    topics: ["Big O Notation", "Graph Theory", "Dynamic Programming", "Trees"],
+                    link: "#",
+                },{
+                    id: "ips",
+                    title: "Introduction to Proof Systems",
+                    description: "Analysis of algorithmic complexity, sorting, searching, and graph algorithms.",
+                    topics: ["Big O Notation", "Graph Theory", "Dynamic Programming", "Trees"],
+                    link: "#",
+                }
+            ],
+        },
+        {
+            year: "Year 2",
+            modules: [
+                {
+                    id: "moc",
+                    title: "Models of Computation",
+                    description: "Analysis of algorithmic complexity, sorting, searching, and graph algorithms.",
+                    topics: ["Big O Notation", "Graph Theory", "Dynamic Programming", "Trees"],
+                    link: "#",
+                },{
+                    id: "cp",
+                    title: "Concurrent Programming",
+                    description: "Analysis of algorithmic complexity, sorting, searching, and graph algorithms.",
+                    topics: ["Big O Notation", "Graph Theory", "Dynamic Programming", "Trees"],
+                    link: "#",
+                },{
+                    id: "ml",
+                    title: "Machine Learning",
+                    description: "Analysis of algorithmic complexity, sorting, searching, and graph algorithms.",
+                    topics: ["Big O Notation", "Graph Theory", "Dynamic Programming", "Trees"],
+                    link: "#",
+                },{
+                    id: "qi",
+                    title: "Quantum Information",
+                    description: "Analysis of algorithmic complexity, sorting, searching, and graph algorithms.",
+                    topics: ["Big O Notation", "Graph Theory", "Dynamic Programming", "Trees"],
+                    link: "#",
+                }
+            ],
+        }
+    ]
   },
   {
     id: "pre-uni",

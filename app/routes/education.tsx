@@ -17,7 +17,7 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
-
+// TODO: move this into components
 // --- COMPONENT 1: THE MODAL (The Pop-Up) ---
 const CourseModal = ({ data , onClose }) => {
   if (!data) return null;
@@ -90,6 +90,30 @@ const CourseModal = ({ data , onClose }) => {
 export default function Education() {
   const [selectedCourse, setSelectedCourse] = useState(null);
 
+  // Helper function to render a grid of modules
+  const ModuleGrid = ({ modules }) => { 
+    return (
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        {modules.map((module) => (
+          <motion.div
+            key={module.id}
+            layoutId={`card-${module.id}`}
+            onClick={() => setSelectedCourse(module)}
+            whileHover={{ scale: 1.02, backgroundColor: "rgba(59, 130, 246, 0.1)" }}
+            className="group cursor-pointer p-4 rounded-xl bg-gray-800/40 border border-gray-700/50 hover:border-blue-500/50 transition-all backdrop-blur-sm"
+          >
+            <div className="flex justify-between items-start">
+              <h4 className="font-semibold text-gray-200 group-hover:text-blue-200 transition-colors">
+                {module.title}
+              </h4>
+              <ChevronRight size={16} className="text-gray-600 group-hover:text-blue-400 transform group-hover:translate-x-1 transition-all" />
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    )
+  }
+
   return (
     <div className="page-container">
       <Navbar currentPage="education"/>
@@ -118,24 +142,24 @@ export default function Education() {
               </div>
 
               {/* 3. The Grid of Course "Stars" */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                {section.modules.map((module) => (
-                  <motion.div
-                    key={module.id}
-                    layoutId={`card-${module.id}`}
-                    onClick={() => setSelectedCourse(module)}
-                    whileHover={{ scale: 1.02, backgroundColor: "rgba(59, 130, 246, 0.1)" }}
-                    className="group cursor-pointer p-4 rounded-xl bg-gray-800/40 border border-gray-700/50 hover:border-blue-500/50 transition-all backdrop-blur-sm"
-                  >
-                    <div className="flex justify-between items-start">
-                      <h4 className="font-semibold text-gray-200 group-hover:text-blue-200 transition-colors">
-                        {module.title}
-                      </h4>
-                      <ChevronRight size={16} className="text-gray-600 group-hover:text-blue-400 transform group-hover:translate-x-1 transition-all" />
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
+              {section.groups ? (
+                // CASE A: The section has years (like University)
+                <div className="space-y-8"> 
+                  {section.groups.map((group) => (
+                      <div key={group.year}>
+                        {/* The Separator Title */}
+                        <h4 className="text-sm uppercase tracking-wider text-blue-400 font-semibold mb-3 border-b border-gray-800 pb-1 w-fit">
+                          {group.year}
+                        </h4>
+                        {/* The Grid for this specific year */}
+                        <ModuleGrid modules={group.modules} />
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  // CASE B: Flat list (like Pre-Uni)
+                  <ModuleGrid modules={section.modules} />
+                )}
             </div>
           ))}
         </div>
