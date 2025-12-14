@@ -2,6 +2,7 @@
 
 import "../styles/page.css";
 import {useState, useEffect, useRef} from "react"
+import vinylImage from "../lib/vinyl-record.png"
 
 const DaftPunkPlayer = () => {
     const [playMusic, setPlayMusic] = useState(false)
@@ -37,7 +38,7 @@ const DaftPunkPlayer = () => {
 
     return (
         <button className={recordClassName} onClick={() => setPlayMusic(!playMusic)}>
-          <img src="./app/lib/vinyl-record.png" alt="daft punk"/>
+          <img src={vinylImage} alt="daft punk"/>
         </button>
     )
 }
