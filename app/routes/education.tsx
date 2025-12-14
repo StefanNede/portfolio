@@ -1,14 +1,17 @@
 "use client"
 import type { Route } from "./+types/home";
-import { Link } from "react-router";
 import { useState } from "react";
-import Navbar from "~/components/Navbar";
-import "../styles/page.css";
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ExternalLink, ChevronRight } from 'lucide-react'; // Icons
+import { ChevronRight } from 'lucide-react'; // Icons
+
+import Navbar from "~/components/Navbar";
+import CourseModal from "~/components/CourseModal";
+import ModuleGrid from "~/components/ModuleGrid";
 import { educationData } from "~/lib/educationData";
 import { StarsBackground } from "~/components/ui/stars-background";
 import { ShootingStars } from "~/components/ui/shooting-stars";
+
+import "../styles/page.css";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -17,102 +20,9 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
-// TODO: move this into components
-// --- COMPONENT 1: THE MODAL (The Pop-Up) ---
-const CourseModal = ({ data , onClose }) => {
-  if (!data) return null;
 
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-      {/* 1. Dark Backdrop with Blur */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        onClick={onClose}
-        className="absolute inset-0 bg-black/60 backdrop-blur-sm"
-      />
-
-      {/* 2. The Glassmorphic Modal Content */}
-      <motion.div
-        layoutId={`card-${data.id}`} // Magic layout transition
-        className="relative w-full max-w-lg bg-gray-900/90 border border-blue-500/30 rounded-2xl p-6 shadow-2xl shadow-blue-500/20 overflow-hidden"
-      >
-        {/* Close Button */}
-        <button 
-          onClick={onClose}
-          className="absolute top-7 right-5 text-gray-400 hover:text-gray-700 transition-colors"
-        >
-          <X size={20}/>
-        </button>
-
-        {/* Content */}
-        <div className="space-y-4">
-          <div>
-            <h3 className="text-2xl font-bold text-white">{data.title}</h3>
-            <p className="text-blue-400 text-sm">{data.subtitle}</p>
-          </div>
-
-          <p className="text-gray-300 leading-relaxed">
-            {data.description}
-          </p>
-
-          {/* Topics Tags */}
-          <div className="flex flex-wrap gap-2">
-            {data.topics.map((topic, i) => (
-              <span 
-                key={i} 
-                className="px-3 py-1 text-xs font-medium text-blue-200 bg-blue-500/20 rounded-full border border-blue-500/20"
-              >
-                {topic}
-              </span>
-            ))}
-          </div>
-
-          {/* Action Link */}
-          <div className="pt-4">
-            <a 
-              href={data.link} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors text-sm font-semibold"
-            >
-              View Course Page <ExternalLink size={14} />
-            </a>
-          </div>
-        </div>
-      </motion.div>
-    </div>
-  );
-};
-
-// --- COMPONENT 2: THE MAIN PAGE ---
 export default function Education() {
-  const [selectedCourse, setSelectedCourse] = useState(null);
-
-  // Helper function to render a grid of modules
-  const ModuleGrid = ({ modules }) => { 
-    return (
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        {modules.map((module) => (
-          <motion.div
-            key={module.id}
-            layoutId={`card-${module.id}`}
-            onClick={() => setSelectedCourse(module)}
-            whileHover={{ scale: 1.02, backgroundColor: "rgba(59, 130, 246, 0.1)" }}
-            className="group cursor-pointer p-4 rounded-xl bg-gray-800/40 border border-gray-700/50 hover:border-blue-500/50 transition-all backdrop-blur-sm"
-          >
-            <div className="flex justify-between items-start">
-              <h4 className="font-semibold text-gray-200 group-hover:text-blue-200 transition-colors">
-                {module.title}
-              </h4>
-              <ChevronRight size={16} className="text-gray-600 group-hover:text-blue-400 transform group-hover:translate-x-1 transition-all" />
-            </div>
-          </motion.div>
-        ))}
-      </div>
-    )
-  }
+  const [selectedCourse, setSelectedCourse] = useState(null)
 
   return (
     <div className="page-container">
@@ -152,13 +62,13 @@ export default function Education() {
                           {group.year}
                         </h4>
                         {/* The Grid for this specific year */}
-                        <ModuleGrid modules={group.modules} />
+                        <ModuleGrid modules={group.modules} setSelectedCourse={setSelectedCourse} />
                       </div>
                     ))}
                   </div>
                 ) : (
                   // CASE B: Flat list (like Pre-Uni)
-                  <ModuleGrid modules={section.modules} />
+                  <ModuleGrid modules={section.modules} setSelectedCourse={setSelectedCourse} />
                 )}
             </div>
           ))}
@@ -176,5 +86,5 @@ export default function Education() {
 
       </div>
     </div>
-  );
-};
+  )
+}
