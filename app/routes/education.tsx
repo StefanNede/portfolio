@@ -30,7 +30,7 @@ export default function Education() {
 
       <div className="mainpage edupage p-8 md:p-16 relative">
 
-        <StarsBackground />
+        <StarsBackground/>
         <ShootingStars/>
         <h2 className="text-4xl font-bold mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">
           Education
