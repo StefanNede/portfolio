@@ -19,7 +19,7 @@ export default function About() {
         <Navbar currentPage="projects"/>
         <div className="mainpage">
           <h1>Projects</h1>
-          <p>This is the Projects page.</p>
+          <p>This is the Projects page - coming soon.</p>
         </div>
       </div>
     </>

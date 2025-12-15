@@ -30,6 +30,7 @@ export default function Contact() {
             <p className="text-blue-400 ml-5 md:ml-10 mt-5 text-lg hover:underline cursor-pointer" onClick={() => {navigator.clipboard.writeText("snedelcub17@gmail.com");alert("copied!")}}>snedelcub17 [at] gmail [dot] com</p>
           </div>
           <StarsBackground/>
+          <ShootingStars/>
         </div>
       </div>
     </>

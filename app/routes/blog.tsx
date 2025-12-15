@@ -19,7 +19,7 @@ export default function Blog() {
         <Navbar currentPage="blog"/>
         <div className="mainpage">
           <h1>Blog</h1>
-          <p>This is the Blog page.</p>
+          <p>This is the Blog page - coming soon.</p>
         </div>
       </div>
     </>
