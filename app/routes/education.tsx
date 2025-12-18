@@ -36,7 +36,7 @@ export default function Education() {
           Education
         </h2>
 
-        <div className="max-w-3xl mx-auto ">
+        <div className="max-w-4xl mx-auto ">
           {educationData.map((section, index) => (
             <div key={section.id} className="relative pl-8 md:pl-12 pb-12 last:pb-0">
               

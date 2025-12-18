@@ -19,12 +19,12 @@ export default function About() {
     <>
       <div className="page-container">
         <Navbar currentPage="about"/>
-        <div className="mainpage p-8 md:p-16 relative">
+        <div className="mainpage edupage p-8 md:p-16 relative">
           <h2 className="text-4xl font-bold mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">
             About Me
           </h2>
           {/* Bio Section */}
-          <div className="z-10 px-10 relative space-y-8 text-md md:text-lg leading-relaxed text-slate-300">
+          <div className="z-10 mx-auto max-w-5xl relative space-y-8 text-md md:text-lg text-slate-300 leading-relaxed">
             <h3 className="text-xl md:text-2xl font-bold text-white">Hi, I'm Stefan! 👋</h3>
             
             <p>
@@ -64,12 +64,12 @@ export default function About() {
           </div>
 
           {/* Awards Section */}
-          <div className="mt-24 relative z-10 pb-20">
-            <h2 className="text-3xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">
+          <div className="mt-24 relative z-10 ">
+            <h2 className="xl:ml-10 text-3xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">
               Awards & Achievements
             </h2>
             
-            <div className="mx-10 grid grid-cols-1 md:grid-cols-2 gap-6 ">
+            <div className="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-6 ">
               {[
                 { title: "College Scholarship Award", desc: "Achieving a distinction in first year public examinations and ranking 1st in college cohort", date: "2025" },
                 { title: "College Examination Award", desc: "2-time winner for performing the best in my college cohort in Hilary and Trinity term examinations", date: "2024,2025" },
