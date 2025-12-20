@@ -49,7 +49,8 @@ export default function About() {
             <p>
               Alongside this, I have developed a strong interest in <span className="text-red-400">quantum information and computation</span>. 
               I am currently evaluating whether to enter the industry or pursue specialized higher studies - specifically 
-              the <a href="https://ethz.ch/en/studies/master/degree-programmes/engineering-sciences/neural-systems-and-computation.html" target="_blank" className="text-blue-400 hover:underline decoration-blue-400 underline-offset-4">[Neural Systems and Computation programme at ETH]</a>, or a <a href="https://gsas.harvard.edu/program/quantum-science-and-engineering" target="_blank" className="text-blue-400 hover:underline decoration-blue-400 underline-offset-4">[PhD in Quantum Science and Engineering at Harvard]</a>.
+              the <a href="https://ethz.ch/en/studies/master/degree-programmes/engineering-sciences/neural-systems-and-computation.html" target="_blank" className="text-blue-400 hover:underline decoration-blue-400 underline-offset-4">[Neural Systems and Computation programme at ETH]</a>, or a <a href="https://gsas.harvard.edu/program/quantum-science-and-engineering" target="_blank" className="text-blue-400 hover:underline decoration-blue-400 underline-offset-4">[PhD in Quantum Science and Engineering at Harvard]</a>. If 
+              I am to enter the industry it is high performance code that interests me the most right now so the field of quantitative development seems ideal.
             </p>
 
             <p className="text-center text-blue-200 py-5 hover:text-lg md:hover:text-xl transition-all duration-400">
